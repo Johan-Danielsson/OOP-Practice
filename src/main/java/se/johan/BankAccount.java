@@ -43,6 +43,22 @@ public class BankAccount {
 
     // ## SETTERS ##
 
+    public static void setCustomerBalance(double customerBalance) {
+        BankAccount.customerBalance = customerBalance;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
+    }
+
+    public void setCustomerPhoneNumber(String customerPhoneNumber) {
+        this.customerPhoneNumber = customerPhoneNumber;
+    }
+
     public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
