@@ -60,7 +60,7 @@ public class BankAccount {
             customerBalance -= amount;
 
         }else{
-            System.out.println("Insufficient Balance");
+            System.out.println("Insufficient Balance, withdrawal aborted.");
         }
     }
     public double getBalance(){
