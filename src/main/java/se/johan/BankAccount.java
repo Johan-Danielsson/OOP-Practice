@@ -5,14 +5,14 @@ public class BankAccount {
     // ## Fields ##
 
     private String accountNumber;
-    private int customerBalance;
+    private static double customerBalance;
     private String customerName;
     private String customerEmail;
     private String customerPhoneNumber;
 
 
     // ## Constructors ##
-    public BankAccount(String accountNumber, int customerBalance, String customerName, String customerEmail, String customerPhoneNumber) {
+    public BankAccount(String accountNumber, double customerBalance, String customerName, String customerEmail, String customerPhoneNumber) {
         this.accountNumber = accountNumber;
         this.customerBalance = customerBalance;
         this.customerName = customerName;
@@ -25,7 +25,7 @@ public class BankAccount {
         return accountNumber;
     }
 
-    public int getCustomerBalance() {
+    public static double getCustomerBalance() {
         return customerBalance;
     }
 
@@ -52,8 +52,23 @@ public class BankAccount {
         String result = "Account number: " + accountNumber + " Current Balance: " + customerBalance + " Customer Name: " + customerName + " Email: " + customerEmail + " Phone Number: " + customerPhoneNumber;
         return result;
     }
-    //public String
-}
+    public void deposit(double amount){
+        customerBalance += amount;
+    }
+    public void withdraw(double amount){
+        if (customerBalance >= amount) {
+            customerBalance -= amount;
+
+        }else{
+            System.out.println("Insufficient Balance");
+        }
+    }
+    public double getBalance(){
+        return customerBalance;
+    }
+
+    }
+
 
 
 
